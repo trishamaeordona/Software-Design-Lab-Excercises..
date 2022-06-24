@@ -1,0 +1,28 @@
+
+r = tk.Tk() #root element
+r.title('Student Details') #setting the title
+r.geometry("500x500") #setting the size
+#declaring variables to display
+Name = "Firstname LastName"
+Department = "CS"
+CourseCode = "CS304"
+CourseTitle = "Python"
+
+#function to execute on button click
+def displayDetails():
+#creating message element with student details and packing them
+messageName = tk.Message(r, text = "Name: " + Name, width=300)
+messageName.pack()
+messageDep = tk.Message(r, text = "Department: " + Department, width=300)
+messageDep.pack()
+messageCouCod = tk.Message(r, text = "Course Code: " + CourseCode, width=300)
+messageCouCod.pack()
+messageCouTi = tk.Message(r, text = "Course Title: " + CourseTitle, width=300)
+messageCouTi.pack()
+
+#creating 2 button elements
+details = tk.Button(r, text='Show Details', width=25, command=displayDetails)
+exit = tk.Button(r, text='Exit Program', width=25, command=r.destroy)
+details.pack()
+exit.pack()
+r. mainloop()
