@@ -1,0 +1,22 @@
+#create empty list
+to_do_list=[]
+
+#while loop for continuous prompt
+while(1):
+    print("Enter a task for your todo list. Press <enter> when done")
+    #taking task input
+    task=input()
+    
+    #if task is initialized then it will be added to list
+    if(task):
+        to_do_list.append(task)
+        print("Task added")
+        
+    #if enter is pressed then the process will stop
+    else:
+        break
+
+#after all items are added, they will be printed one by one
+print("to-do list \n")
+for task in to_do_list:
+    print(task)
